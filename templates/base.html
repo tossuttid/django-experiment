@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Amo los perros</title>
+    <style>
+        body {
+            max-width: 800px;
+            margin: auto;
+
+            background-color: #222;
+            color: #ccc;
+
+            font-family: sans-serif;
+
+        }
+
+        a {
+            color: aqua;
+        }
+
+        hr {
+            background-color: #ccc;
+            border: none;
+            height: 1px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Barra de Navegación -->
+    <nav>
+        <h1>Amo los perros</h1>
+        <ul>
+            <li><a href="#">¿Quiénes somos?</a></li>
+            <li><a href="#">¿Qué hacemos?</a></li>
+            <li><a href="#">¿Dónde nos encontrás?</a></li>
+        </ul>
+    </nav>
+    {% block content %}
+    <!-- Acá sale el contenido -->
+    {% endblock content %}
+    
+    <footer>
+        <p>Información de contacto:</p>
+        <ul>
+            <li>cotelaichaco@gmail.com</li>
+            <li>3644308298</li>
+            <li>Facebook: Grupo “Amo los Perros SP”</li>
+            <li>Instagram: @amo_los_perros_sp</li>
+        </ul>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<header>
+    <h3>Amamos a los wauwau!!!</h3>
+    <p>Acá en nuestro blog te comentamos más sobre eso:</p>
+</header>
+
+<hr>
+
+{% for post in post_list %}
+
+<h2>{{ post.title }}</h2>
+<p>{{ post.author }} | {{ post.created_on}} </p>
+<p>{{post.content|slice:":200" }}</p>
+<a href="{% url 'post_detail' post.slug  %}">Leer más</a>
+
+{% endfor %}
+<hr>
+{%endblock%}
