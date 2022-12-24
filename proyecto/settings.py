@@ -77,12 +77,27 @@ WSGI_APPLICATION = 'proyecto.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# Usamos sqlite en local (para simplificar y evitar confusiones)
+# Después en producción conectamos al mysql del pythonanywhere
+# https://help.pythonanywhere.com/pages/UsingMySQL/
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        # ¡¡¡ MIRAR LOS COMENTARIOS DE ARRIBA !!!
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': '<your_username>$<your_database_name>',
+#         'USER': '<your_username>',
+#         'PASSWORD': '<your_mysql_password>',
+#         'HOST': '<your_mysql_hostname>',
+#     }
+# }
 
 
 # Password validation
